@@ -1,1 +1,57 @@
-*~
+# Tex temp files
+/Docs/Dissertation/dt_example.aux
+/Docs/Dissertation/dt_example.log
+/Docs/Dissertation/dt_example.synctex.gz
+/Docs/Dissertation/dt_example.toc
+/Docs/Dissertation/dt_example.bbl
+/Docs/Dissertation/dt_example.blg
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+
+# tmp save
+*~*
+
+# Qt files
+*Code/MultiAgentSystemTest/.settings/language.settings.xml*
+*Code/QtTracker/QtTracker.pro.user*
+
+# Latex files
+*.aux
+*.log
+*.synctex.gz
+*.bbl
+*.blg
+
+# build
+Code/build-QtTracker-Desktop_Qt_5_3_GCC_64bit-Debug/*
