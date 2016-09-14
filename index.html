@@ -24,73 +24,12 @@
       </header>
       <section>
       
-<h2>Dissertation</h2>
+<h3>Dissertation</h3>
 
 <p>
-This page provides supplementary materials for my dissertation. Below you will find annotated videos from the experiments, 
-as well as my source code. Should you have any questions, don't hesitate to contact me.
+<a href="dissertation.html">This page</a> provides supplementary materials for my dissertation. 
 </p>
  
-<ul>
-<li>You can download my dissertation <a href="https://github.com/podhrmic/podhrmic.github.io/blob/master/docs/podhradsky_MASforAdaptiveControlofaFWMAV.pdf">here [PDF]</a></li>
-<li> Source code is available <a href="https://github.com/podhrmic/podhrmic.github.io/tree/master/src">here</a></li>
-</ul>
- 
-
-<div style="text-align: center">
-<h3>Abstract</h3>
-<p><em>
-Biomimetic flapping-wing vehicles have attracted recent interest because of their numerous potential military and civilian applications. In this dissertation is described the design of a multi-agent adaptive controller for such a vehicle. This controller is responsible for estimating the vehicle pose (position and orientation) and then generating four parameters needed for split-cycle control of wing movements to correct pose errors. These parameters are produced via a subsumption architecture rule base. The control strategy is fault tolerant. Using an online learning process, an agent continuously monitors the vehicle’s behavior and initiates diagnostics if the behavior has degraded. This agent can then autonomously adapt the rule base if necessary. Each rule base is constructed using a combination of extrinsic and intrinsic evolution. Details of the vehicle, the multi-agent system architecture, agent task scheduling, rule base design, and vehicle control are provided.
-</em></p>
-</div>
-
-<h3>Introduction</h3>
-
-<p>An introductory video showing the robot, the experimental setup and a running experiment.
-</p>
-
-<p><iframe width="500" height="281" src="https://www.youtube.com/embed/2uk6M-4njmU" frameborder="0" allowfullscreen></iframe></p>
-
-
-<h3>Waypoint following</h3>
-
-<p>The vehicle is placed in the middle of the water tank, and after the initialization it goes back and forth between two waypoints (marked with green dots).
-See Section 5.3 of my dissertation for more details.
-</p>
-
-<p><iframe width="500" height="281" src="https://www.youtube.com/embed/oYEjCaRoLNU" frameborder="0" allowfullscreen></iframe></p>
-
-
-<h3>Fault detection and recovery</h3>
-
-<p>The vehicle is detecting and recovering from the <i>Left Wing damaged</i> fault. We cut down the left wing by 30 percent. After initialization, the vehicle rotates right by 360 degrees and measures
-time needed to perform the maneuver. Based on the duration of the maneuver the likelihood of a fault is evaluated. If a fault is detected (which is this case), updated recovery values of deltas and omegas are
-loaded from the memory. Then the vehicle continues going to the destination waypoint.
-See Section 5.4 of my dissertation for more details.
-</p>
-
-<p><iframe width="500" height="281" src="https://www.youtube.com/embed/fefXhgO3AvM" frameborder="0" allowfullscreen></iframe></p>
-
-
-<h3>Obstacle avoidance</h3>
-
-<p>
-A virtual obstacle (marked as a green line) is placed in the middle of the water tank. The vehicle is commanded to go to the waypoint at the opposite side of the water tank. Because the waypoint is behind the obstacle,
-an obstacle avoidance routine (described in Algorithm 3) is performed. See Section 5.5 of my dissertation for more details.
-</p>
-
-<p><iframe width="500" height="281" src="https://www.youtube.com/embed/lq2R6gGgLRM" frameborder="0" allowfullscreen></iframe></p>
-
-
-<h3>Example of remote control</h3>
-
-<p>
-An example of the early version of GUI is shown. In this video we tested remote control of the vehicle - by moving the sliders, the wings respond accordingly.
-See Appendix B for more details.
-</p>
-
-<p><iframe width="500" height="281" src="https://www.youtube.com/embed/1BWZJ6Z004M" frameborder="0" allowfullscreen></iframe></p>
-
 
 
       
