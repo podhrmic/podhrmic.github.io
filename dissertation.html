@@ -26,6 +26,13 @@
       
 <h2>Dissertation</h2>
 
+<div style="text-align: left">
+<h3>Abstract</h3>
+<p><em>
+Biomimetic flapping-wing vehicles have attracted recent interest because of their numerous potential military and civilian applications. In this dissertation is described the design of a multi-agent adaptive controller for such a vehicle. This controller is responsible for estimating the vehicle pose (position and orientation) and then generating four parameters needed for split-cycle control of wing movements to correct pose errors. These parameters are produced via a subsumption architecture rule base. The control strategy is fault tolerant. Using an online learning process, an agent continuously monitors the vehicle’s behavior and initiates diagnostics if the behavior has degraded. This agent can then autonomously adapt the rule base if necessary. Each rule base is constructed using a combination of extrinsic and intrinsic evolution. Details of the vehicle, the multi-agent system architecture, agent task scheduling, rule base design, and vehicle control are provided.
+</em></p>
+</div>
+
 <p>
 This page provides supplementary materials for my dissertation. Below you will find annotated videos from the experiments, 
 as well as my source code. Should you have any questions, don't hesitate to contact me.
@@ -36,15 +43,29 @@ as well as my source code. Should you have any questions, don't hesitate to cont
 <li> Source code is available <a href="https://github.com/podhrmic/podhrmic.github.io/tree/master/src">here</a></li>
 </ul>
  
+ <h3><a id="publications" class="anchor" href="#publications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Relevant Publications</h3>
 
-<div style="text-align: center">
-<h3>Abstract</h3>
-<p><em>
-Biomimetic flapping-wing vehicles have attracted recent interest because of their numerous potential military and civilian applications. In this dissertation is described the design of a multi-agent adaptive controller for such a vehicle. This controller is responsible for estimating the vehicle pose (position and orientation) and then generating four parameters needed for split-cycle control of wing movements to correct pose errors. These parameters are produced via a subsumption architecture rule base. The control strategy is fault tolerant. Using an online learning process, an agent continuously monitors the vehicle’s behavior and initiates diagnostics if the behavior has degraded. This agent can then autonomously adapt the rule base if necessary. Each rule base is constructed using a combination of extrinsic and intrinsic evolution. Details of the vehicle, the multi-agent system architecture, agent task scheduling, rule base design, and vehicle control are provided.
-</em></p>
-</div>
+<ul>
 
-<h3>Introduction</h3>
+<li>
+<strong>An Evolutionary Approach to Tuning a Multi-Agent System for Autonomous Adaptive Control of a Flapping-Wing Micro Air Vehicle</strong>,
+<em>Michal Podhradsky,  Garrison Greenwood, John Gallagher, International Journal of Robotics and Automation Technology (2016)</em>
+<a href="https://www.researchgate.net/publication/307921490_An_Evolutionary_Approach_to_Tuning_a_Multi-Agent_System_for_Autonomous_Adaptive_Control_of_a_Flapping-Wing_Micro_Air_Vehicle">[PDF]</a>
+</li>
+
+<li>
+<strong>A Multi-Agent System for Autonomous Adaptive Control of a Flapping-Wing Micro Air Vehicle</strong>,
+<em>Michal Podhradsky,  Garrison Greenwood, John Gallagher, Eric Matson, IEEE International Conference on Evolvable Systems, (ICES 2015)</em>
+<a href="https://www.researchgate.net/publication/304289453_A_Multi-Agent_System_for_Autonomous_Adaptive_Control_of_a_Flapping-Wing_Micro_Air_Vehicle">[PDF]</a>
+</li>
+
+</ul>
+
+
+
+<h3><a id="video" class="anchor" href="#publications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Video</h3>
+
+<h4>Introduction</h4>
 
 <p>An introductory video showing the robot, the experimental setup and a running experiment.
 </p>
@@ -52,7 +73,7 @@ Biomimetic flapping-wing vehicles have attracted recent interest because of thei
 <p><iframe width="500" height="281" src="https://www.youtube.com/embed/2uk6M-4njmU" frameborder="0" allowfullscreen></iframe></p>
 
 
-<h3>Waypoint following</h3>
+<h4>Waypoint following</h4>
 
 <p>The vehicle is placed in the middle of the water tank, and after the initialization it goes back and forth between two waypoints (marked with green dots).
 See Section 5.3 of my dissertation for more details.
@@ -61,7 +82,7 @@ See Section 5.3 of my dissertation for more details.
 <p><iframe width="500" height="281" src="https://www.youtube.com/embed/oYEjCaRoLNU" frameborder="0" allowfullscreen></iframe></p>
 
 
-<h3>Fault detection and recovery</h3>
+<h4>Fault detection and recovery</h4>
 
 <p>The vehicle is detecting and recovering from the <i>Left Wing damaged</i> fault. We cut down the left wing by 30 percent. After initialization, the vehicle rotates right by 360 degrees and measures
 time needed to perform the maneuver. Based on the duration of the maneuver the likelihood of a fault is evaluated. If a fault is detected (which is this case), updated recovery values of deltas and omegas are
@@ -72,7 +93,7 @@ See Section 5.4 of my dissertation for more details.
 <p><iframe width="500" height="281" src="https://www.youtube.com/embed/fefXhgO3AvM" frameborder="0" allowfullscreen></iframe></p>
 
 
-<h3>Obstacle avoidance</h3>
+<h4>Obstacle avoidance</h4>
 
 <p>
 A virtual obstacle (marked as a green line) is placed in the middle of the water tank. The vehicle is commanded to go to the waypoint at the opposite side of the water tank. Because the waypoint is behind the obstacle,
@@ -82,7 +103,7 @@ an obstacle avoidance routine (described in Algorithm 3) is performed. See Secti
 <p><iframe width="500" height="281" src="https://www.youtube.com/embed/lq2R6gGgLRM" frameborder="0" allowfullscreen></iframe></p>
 
 
-<h3>Example of remote control</h3>
+<h4>Example of remote control</h4>
 
 <p>
 An example of the early version of GUI is shown. In this video we tested remote control of the vehicle - by moving the sliders, the wings respond accordingly.
