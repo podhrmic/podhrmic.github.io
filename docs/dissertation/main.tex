@@ -1,0 +1,45 @@
+\documentclass[12pt, letter, makeidx, oneside, usenames]{book}
+
+%%% ----------------------------
+%%% include all packages
+%%% ----------------------------
+\input{style}
+\begin{document}
+
+\frontmatter
+\singlespacing
+\updatechaptername
+\input{text/Title}
+\input{text/Abstract}
+\input{text/Acknowledgements}
+\input{text/TOC}
+
+
+%%% ----------------------------
+%%% main document
+%%% ----------------------------
+\mainmatter
+\doublespacing
+
+\input{text/Introduction}
+\input{text/Background}
+\input{text/ProblemDefinition}
+\input{text/Approach}
+\input{text/Results}       
+\input{text/Conclusion}
+
+
+%%% ----------------------------
+%%% Bibliography
+%%% ----------------------------
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{abbrv}
+{\bibliography{Files/MyBib}}
+
+%%% ----------------------------
+%%% Appendix
+%%% ----------------------------
+\input{text/Appendix}
+
+\end{document}

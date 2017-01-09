@@ -1,0 +1,29 @@
+% *************** Table of Contents ***************
+\clearpage
+
+\thispagestyle{empty}
+
+\singlespacing
+\renewcommand\contentsname{\MakeUppercase{Table of Contents}}
+\tableofcontents
+
+\clearpage
+\thispagestyle{empty}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\renewcommand\listtablename{\MakeUppercase{List of Tables}}
+\let\oldnumberline\numberline
+\renewcommand{\numberline}{\tablename~\oldnumberline}
+\listoftables
+
+\clearpage
+\thispagestyle{empty}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\renewcommand\listfigurename{\MakeUppercase{List of Figures}}
+\renewcommand{\numberline}{\figurename~\oldnumberline}
+\listoffigures

@@ -1,0 +1,39 @@
+%-----<<< CONCLUSION & FUTURE WORK >>>-----
+\chapter{Conclusion \& Future Work}
+\label{ch:conclusion}
+
+In Chapter~\ref{ch:intro} we have shown that Flapping-Wing Micro Aerial Vehicles (FWMAVs) have potential for many applications, ranging from military reconnaissance in the battlefield, through search \& rescue for mapping dangerous environments and helping during disasters, to artificial plant pollination. In order to fully explore their potential, autonomous operation and fault tolerance is required. Chapter~\ref{ch:background} provided theoretical background needed for understanding the concept of FWMAVs and their design, testing and control. This work was published in two publication - a conference proceeding \cite{podhrad1} and a journal paper \cite{podhrad2}. The expected outcomes of our research were defined in Chapter~\ref{ch:intro}:
+
+\begin{enumerate}
+\item understanding the viability of multi-agent system (MAS) for control of flapping wing vehicles
+	\begin{itemize}
+	\item Based on the state-of-the-art research summarized in Chapter~\ref{ch:background}, we showed that a MAS is suitable for the control of a FWMAV. Its main advantage over conventional control systems is the fact that no model of the vehicle is needed - and obtaining an identified model of a small FWMAV can be tedious and requires specialised measurement equipment. On top of that, each vehicle is slightly different due to manufacturing imperfections and inherent non-linearities, so the model would have to be updated for each individual vehicle.
+	\item The need for a model is mitigated by the use of Evolutionary Algorithm (EA) to find a good set of control inputs for given vehicle. Although we cannot guarantee the optimality of the found solution (because the EA doesn't always converge to the global optimum), we can say -- based on our data -- that the control inputs found by the EA are satisfactory and can be used in experiments.
+	\end{itemize}
+\item developing a multi-agent control system allowing the vehicle to follow trajectory in experimental settings
+	\begin{itemize}
+	\item a MAS has never been used for the control of a FWMAV before. We developed a MAS capable of control, navigation and fault recovery of our FWMAV. Our MAS is decribed in detail in Chapter~\ref{ch:approach}. This system can be used on other FWMAVs, for example those mentioned in Chapter~\ref{ch:background} or others not developed yet. That way the researches can have a jump-start using our results and the existing code (publicly available) to quickly develop their own autonomous vehicles.
+	\item The use of the subsumption architecture for autonomous operation of the vehicle is not new, and have been already successfully applied in many research, industrial and commercial projects. Using a proven concept gives us a robust solution, and future users can easily extend our rule-base to add new behaviours - such as target identification, swarming, autonomous return to the base etc.
+	\end{itemize}
+\item developing fault detection and fault recovery mechanisms based on a combination of extrinsic and intrinsic evolution
+	\begin{itemize}
+	\item The fault detection and recovery system mechanism is a part of the developed MAS. Extrinsic evolution is used for initial estimate of the control values of the FWMAV, while intrinsic evolution is used to fine-tune those values for each individual vehicle. We successfully tested the fault detection and recovery mechanism for a recovery after a wing damage - which is arguably the most common fault we can expect (can occur for example after a collision with an obstacle). Giving the vehicle the fault recovery ability, we certainly broadened its operational envelope.
+	\item The identical concept of fault detection/recovery can be extended to capture other types of faults (motor overheating, power system issues, etc.), but its implementation would require additional hardware - such as sensors and redundant components in the power system.
+	\end{itemize}
+\item developing high degree of autonomy of the vehicle, including trajectory following and fault recovery procedures
+	\begin{itemize}
+	\item The high degree of autonomy was achieved by using subsumption architecture in conjunction with a MAS. On top of trajectory following and fault recovery our system includes an obstacle avoidance routine, which allows the vehicle to operate in presence of obstacles.
+	\item The obstacle avoidance algorithm we developed prevents the vehicle from colliding with obstacles within the experimental area. It can be further improved and extended, to for example incorporate inputs from onboard sensors or from other vehicles (in case of swarm flight).
+	\end{itemize}
+\end{enumerate}
+
+In summary we were able to meet and exceed all expected results, and deliver a working prototype of an autonomous fault tolerant vehicle. The approach we pioneered can be used for new types of FWMAVs and other research projects can use our research as a jump start for their own implementation. Although certainly not a complete off-the-shelf solution, this dissertation provides a good foundation for future research in this domain. The code used is freely available and can be easily extended should it be used on different FWMAVs. Our system can be also used on other types of robots with complicated motion, such as walking robots.
+
+\section{Future Work}
+One area that could be explored in deeper details is the evolution of control parameters. We used Evolution Strategy, but the evolutionary algorithm used in this work is only one of many existing evolutionary algorithms. More sophisticated algorithms, such as \textit{Artificial Bee Colony} \cite{Karaboga2007} or \textit{Particle Swarm Optimization} \cite{Hatanaka2007} can be used and compared and evaluated.
+
+The most natural next step would be to focus on hardware of the robot, and remove the restriction to 2 dimensional movement. Flapping wing platforms of comparable size that are able to carry their own weight already exist (for example \cite{Hines2015}) so research in this direction would be promising. Another option is to aim for free-flying platforms with on-board sensors, such as \cite{Rosen2016}, and integrate attitude \& position estimation algorithms to establish a truly autonomous vehicle.
+
+Flapping-wing and other insect-inspired robots will likely be more and more common in coming years, and in foreseeable future we can expect availability of such robots for mass scale applications. We may even see insect-like robots to be used during Mars exploration, because of their autonomous capabilities and very small size.
+
+We can expect many more flapping-wing insect-like robots in the coming years, and we are very happy that we were able to contribute to knowledge in this area.

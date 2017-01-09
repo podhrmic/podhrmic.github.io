@@ -1,0 +1,122 @@
+\usepackage[left=1.5in, top=1.4in, bottom=1.4in, right=1.1in]{geometry}
+\usepackage{phdthesis}
+\usepackage{caption}
+\usepackage{epsfig,titlesec,amsfonts,amsthm,amssymb,amsmath,setspace,enumerate,pxfonts,txfonts}
+\usepackage[font=footnotesize]{subfig}
+\usepackage{setspace}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{mathrsfs}
+\usepackage{tabularx}
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+\usepackage{wrapfig}
+\usepackage{cite}
+\usepackage{url}
+\usepackage{multirow}
+\usepackage[nochapter]{vhistory}
+\usepackage[hidelinks]{hyperref}
+\usepackage{longtable}
+\usepackage[nonumberlist]{glossaries}
+\usepackage{soul}
+\usepackage{enumitem}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{todonotes}
+\usepackage{amsthm}
+\usepackage{bibentry}
+\usepackage[subfigure,titles]{tocloft} % for editing TOC (add Chapter and Appendix)
+\nobibliography*
+%define todoin as cmd to print todo note inline and not at margins
+\newcommand\todoin[2][]{\todo[inline, caption={2do}, #1]{
+\begin{minipage}{\textwidth-4pt}#2\end{minipage}}}
+
+%\usepackage[finalnew]{trackchanges}
+% Track changes has a number of different ways that it can display the
+% edits in the final dvi or pdf file.
+%   finalold  - Reject all edits.
+%   finalnew  - Accept all edits.
+%   footnotes - Display edits as footnotes.
+%   margins   - Display edits as margin notes.
+%   inline    - Display edits inline. 
+%   \note[editor]{The note}
+%   \annote[editor]{Text to annotate}{The note}
+%   \add[editor]{Text to add}
+%   \remove[editor]{Text to remove}
+%   \change[editor]{Text to remove}{Text to add} 
+
+% Trackchanges
+%\addeditor{CT}
+%\addeditor{JB}
+
+\makeglossaries
+
+\makeatletter
+\newtheoremstyle{researchTopic}% name of the style to be used
+  {25pt}% space before
+  {5pt}% space after
+  {}% body font
+  {}% indent
+  {\bfseries}% header font
+  {.}% punctuation
+  {.5em}% after theorem header
+  {}% header specification (empty for default)
+\makeatother
+
+\makeatletter
+\newtheoremstyle{indented}% name of the style to be used
+  {15pt}% space before
+  {5pt}% space after
+  {\addtolength{\@totalleftmargin}{2em}
+   \addtolength{\linewidth}{-2em}
+   \parshape 1 2em \linewidth}% body font
+  {}% indent
+  {\bfseries}% header font
+  {.}% punctuation
+  {.5em}% after theorem header
+  {}% header specification (empty for default)
+\makeatother
+
+%\newtheorem{theorem}{Theorem}
+\theoremstyle{researchTopic}
+\newtheorem{theorem}{Research Topic}
+
+\theoremstyle{indented}
+% \newtheorem{corollary}{Question}
+\newtheorem{corollary}{Question}[theorem]
+
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newcounter{question}
+\newenvironment{question}[1][]{\refstepcounter{question}\par\medskip
+  \textbf{Q\thequestion. #1} \rmfamily}{\medskip}
+
+% here we define how chapter titles look like, see manual to 
+% "The titlesec , titleps and titletoc Packages"
+\titleformat{\chapter}[display]
+	{\centering \normalsize}
+	{\MakeUppercase{\chaptertitlename} \thechapter}
+	{0pc}
+	{\normalsize \uppercase}
+
+
+
+\titleformat{\section}[hang]{\bfseries \uppercase}
+{\thesection}{12pt}{}
+
+\titleformat{\subsection}[hang]{\bfseries}
+{\thesubsection}{12pt}{}
+
+\titleformat{\subsubsection}[hang]{\bfseries}
+{\thesubsubsection}{12pt}{}
+
+% Chapter name in TOC
+\renewcommand{\cftchappresnum}{Chapter }
+\renewcommand{\cftchapaftersnum}{:}
+\renewcommand{\cftchapnumwidth}{6em}
+\makeatletter
+\newcommand*\updatechaptername{%
+	\addtocontents{toc}{\protect\renewcommand*\protect\cftchappresnum{\@chapapp\ }}
+}
+\makeatother
